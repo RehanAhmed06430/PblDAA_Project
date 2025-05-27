@@ -1,7 +1,7 @@
 import osmnx as ox
 import matplotlib.pyplot as plt
 
-# ✅ Custom imports
+
 from utils.graph_loader import load_graph
 from utils.map_generator import create_folium_map
 from algorithms.bfs import bfs_path
@@ -10,12 +10,12 @@ from algorithms.dijkstra import dijkstra_path
 from algorithms.bellman_ford import bellman_ford_path
 
 # ⛳ GPS coordinates for India Gate and Red Fort
-source_coords = (28.6129, 77.2295)  # India Gate
-target_coords = (28.6562, 77.2410)  # Red Fort
+source_coords = (28.6129, 77.2295)  
+target_coords = (28.6562, 77.2410)  
 
 # ✅ Step 1: Load OSM graph around center point (India Gate area)
-center_point = (28.6300, 77.2350)  # Central point between both
-distance = 4000  # Radius (in meters)
+center_point = (28.6300, 77.2350) 
+distance = 15000  
 
 G = load_graph(center_point=center_point, distance=distance)
 
