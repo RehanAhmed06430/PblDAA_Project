@@ -1,10 +1,9 @@
 import osmnx as ox
 
 # Optional: logging and settings
-ox.settings.timeout = 180              # Increase network timeout
-ox.settings.use_cache = True           # Cache responses to save time
-ox.settings.log_console = True         # Show logs for debug
-
+ox.settings.timeout = 180              
+ox.settings.use_cache = True          
+ox.settings.log_console = True         
 def load_graph(center_point=(28.6129, 77.2295), distance=3000):
     """
     Downloads road network from OpenStreetMap data around a central GPS point.
