@@ -52,7 +52,7 @@ def show_map(m):
 @st.cache_data
 def load_city_graph():
     try:
-        center = (28.6300, 77.2350)  # Delhi center
+        center = (28.6300, 77.2350)  
         G = ox.graph_from_point(center, dist=4000, network_type='drive')
         return G, "Graph loaded successfully! ✅"
     except Exception as e:
@@ -63,7 +63,7 @@ def run_algorithm(algo_func, G, source, target):
     start_time = time.time()
     path = algo_func(G, source, target)
     end_time = time.time()
-    return path, round((end_time - start_time) * 1000, 2)  # time in milliseconds
+    return path, round((end_time - start_time) * 1000, 2)  
 
 # Title
 st.title("🗺️ Shortest Path Finder")
